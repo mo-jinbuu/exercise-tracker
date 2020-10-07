@@ -30,6 +30,16 @@
           <p><strong>GET users's exercise log: </strong><code>GET /api/exercise/log?{userId}[&amp;from][&amp;to][&amp;limit]</code></p>
           <p><strong>{ }</strong> = required, <strong>[ ]</strong> = optional</p>
           <p><strong>from, to</strong> = dates (yyyy-mm-dd); <strong>limit</strong> = number</p>
+          <!-- TODO: fix log form -->
+          <form action="/api/exercise/log" method="post">
+            <h3>Get User's Exercise Log</h3>
+            <p><code>POST /api/exercise/log</code></p>
+            <input type="text" name="userId" placeholder="userId*" required>
+            <input type="text" name="from" placeholder="from*">
+            <input type="text" name="to" placeholder="to*">
+            <input type="number" name="limit"  min="1" max="99" placeholder="How many logs?*">
+            <input type="submit" value="Submit">
+         </form>
           <form action="/api/exercise/users" method="get">
             <h3>Get all current users</h3>
             <p><code>GET /api/exercise/users</code></p>
